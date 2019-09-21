@@ -1,7 +1,23 @@
-# empty-project
+# Wussuh
 
-Empty project.
+"Wussuh" is kind of like a millenial version of "What's up?" 
 
+On a serious note, many people doesn't really like sharing their emotions to somebody, this app will
+be for that person so thay they may have an outlet where they can vent out their emotions, whether they're
+sad, happy, angry or even if they feel like they can conquert the world!
+
+This project has the basic functions (login, submissions etc.) and built using React.JS
+future development will include other features such as:
+
+1. Sharing
+2. Mood Tracker
+3. Profiles
+
+and some other things that I may think of.
+
+Due to time constraints, Google sheets via Google App Script was used to manage and store data, a "real" database will be used in the future should this project goes out of it's "Demo" status.
+
+---
 ## Building and running on localhost
 
 First install dependencies:
@@ -32,6 +48,3 @@ npm run build-dev
 
 Open the file `dist/index.html` in your browser
 
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
