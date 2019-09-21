@@ -1,0 +1,121 @@
+/* LEFT COLUMN */
+div#welcome {
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+li.mood p {
+  font-size: 13px;
+  font-family: 'Work Sans';
+  margin: 5px 0 0 0;
+  transition: all 0.4s;
+}
+
+li.mood {
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+li.mood i {
+  font-size: 35px;
+  transition: all 0.4s;
+}
+
+li.mood:hover i {
+  font-size: 30px;
+  transition: all 0.4s;
+}
+
+li.mood:hover p {
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.4s;
+}
+
+ul#moods {
+  text-align: center;
+}
+
+.moods-box button:hover {
+  transition: all 0.4s;
+  background: #3d3d3d;
+  color: #ffc600;
+  letter-spacing: 0.08em;
+}
+
+.moods-box button {
+  display: block;
+  font-family: 'Baloo';
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  letter-spacing:normal;
+  background: #ffc600;
+  font-size: 20px;
+  color: #3d3d3d;
+  transition: all 0.4s;
+}
+
+.moods-box input {
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.moods-box {
+  margin-top: 30px;
+}
+
+.moods-box h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+textarea#comment {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    min-height: 70px;
+    font-family: 'Work Sans';
+}
+
+[data-mood="booyah"] * {
+  color: #ffb700;
+}
+
+[data-mood="happy"] * {
+  color: #a6cc2b;
+}
+
+[data-mood="meh"] * {
+  color: #6c6c6c;
+}
+
+[data-mood="sad"] * {
+  color: #0271f1;
+}
+
+[data-mood="angry"] * {
+  color: #e55305;
+}
+
+
+#main-content.addentry div#leftcol {
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s;
+}
