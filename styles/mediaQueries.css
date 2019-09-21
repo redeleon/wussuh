@@ -1,0 +1,29 @@
+@media screen and (min-width:997px) and (max-width:1280px) {
+  li.mood {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .mood-log-head {
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  #welcome {
+    margin-top: 0px !important;
+  }
+
+  .mood-log-wrap {
+    padding: 0 10px;
+  }
+
+  div#leftcol {
+    display: block !important;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: -100%;
+    transition: all 0.4s;
+  }
+}
