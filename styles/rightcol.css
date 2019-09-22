@@ -45,9 +45,10 @@ p.log-desc {
 }
 
 .logged-date p {
-    font-size: 12px;
-    text-align: center;
-    color: #ffc600;
+  font-size: 12px;
+  text-align: center;
+  color: #ffc600;
+  margin-bottom: 0;
 }
 
 i.happy:before {

@@ -11,7 +11,7 @@ export default class SelectMoodMonth extends React.Component {
         <div className="col-md-6 col-12">
           <h2 className="heading-text py-2">Mood Board</h2>
         </div>
-        <div className="col-md-6 col-12 text-md-right">
+        <div className="col-md-6 col-12 text-md-right d-none">
           <select value={this.props.value} selected={this.props.selected} id="mood-month" onChange={this.props.onChangeHandler}>
               <option value="0">January</option>
               <option value="1">February</option>

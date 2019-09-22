@@ -1,0 +1,42 @@
+div#login.login input#name,
+div#login.login button#register {
+    display: none;
+}
+div#login.register button#sign-in {
+    display: none;
+}
+div#login .login-wrapper p:hover {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.4s;
+}
+div#login .login-wrapper p {
+    margin-top: 15px;
+    transition: all 0.4s;
+    cursor: pointer;
+    font-weight: 400;
+}
+div#login .login-wrapper h1 {
+    font-size: 60px;
+    text-align: center;
+}
+div#login .login-wrapper {
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+div#login {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffc600;
+}
