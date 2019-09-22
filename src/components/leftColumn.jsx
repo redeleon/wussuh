@@ -1,16 +1,27 @@
 import React from "react";
+import LoaderRing from './loader';
+import axios from 'axios';
 
-export default class LeftColumnComponent extends React.Component {
+export const LeftColumnComponent = () => class extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      isLoading:false,
       mood:"",
       comment:"",
-      date:""
+      date: new Date().getTime(),
+      name: typeof(localStorage.name) != "undefined" ? localStorage.name : "Anonymous"
     }
     this.selectMood = this.selectMood.bind(this);
-    this.submit = this.submit.bind(this);
     this.typingComments = this.typingComments.bind(this);
+    this.loadState = this.loadState.bind(this);
+  }
+
+  loadState(){
+    console.log("change isLoading");
+    this.setState({
+      isLoading: true
+    })
   }
 
   selectMood(event){
@@ -18,13 +29,6 @@ export default class LeftColumnComponent extends React.Component {
     this.setState({
       mood: mood
     })
-  }
-
-  submit(event){
-    this.setState({
-      date: new Date().getTime()
-    })
-    console.log(this.state);
   }
 
   typingComments(event){
@@ -81,7 +85,7 @@ export default class LeftColumnComponent extends React.Component {
 
             <div id="log-mood">
               <textarea value={this.state.comment} onChange={this.typingComments} type="text" id="comment" placeholder="Tell us why you feel that way.."></textarea>
-              <button type="button" id="submit" onClick={this.submit}>Submit</button>
+              <button data-state={this.props.isLoading || this.state.isLoading ? "loading" : "notloading"} className="w-button" type="button" id="submit" onClick={ () => { this.props.submitHandler(this.state); this.loadState(); }}><span>Submit</span><LoaderRing /></button>
             </div>
           </div>
         </div>
