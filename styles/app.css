@@ -41,7 +41,36 @@ body {
 .subheading-text {
     font-family: 'Work Sans';
 }
-
+#add-entry:hover {
+    background: #ffc600;
+    color: #444;
+    transition: all 0.4s;
+}
+div#add-entry i {
+    margin: 0;
+    padding: 0;
+    line-height: 2.45;
+}
+div#add-entry {
+    position: fixed;
+    z-index: 90;
+    bottom: 10px;
+    right: 10px;
+    background: #333;
+    color: #ffc600;
+    font-size: 25px;
+    border-radius: 100px;
+    transition: all 0.4s;
+    cursor: pointer;
+    height: 60px;
+    text-align: center;
+    width: 60px;
+}
+div#add-entry.addentry {
+    transform: rotate(135deg);
+    background: #444 !important;
+    color: #ffc600 !important;
+}
 /* MAIN CONTENT */
 div#main-content {
     padding: 90px 30px;
@@ -57,4 +86,80 @@ div#main-content.addentry:after {
     top: 0;
     left: 0;
     z-index: 90;
+}
+
+.w-button:hover {
+  transition: all 0.4s;
+  background: #3d3d3d;
+  color: #ffc600;
+  letter-spacing: 0.08em;
+}
+
+.w-button {
+  display: block;
+  font-family: 'Baloo';
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  letter-spacing:normal;
+  background: #ffc600;
+  font-size: 20px;
+  color: #3d3d3d;
+  transition: all 0.4s;
+}
+
+.w-input {
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 1px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #333 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button[data-state="loading"] > span {
+  display:none;
+}
+button[data-state="notloading"] .lds-ring {
+  display:none;
 }
